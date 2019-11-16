@@ -1,0 +1,362 @@
+body {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 80%;
+}
+
+h5 {
+	padding: 0;
+	margin: 5px 0;
+	text-align: center;
+	color: rgb(13, 69, 96);
+	font-size: 14px;
+}
+
+h5 span {
+	float: left;
+	background-color: black;
+	height: 2px;
+	width: 10%;
+	margin: 1% 44%;
+}
+
+.actualdiv {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.linetop {
+	width: 50%;	
+}
+
+.linetop>img {
+	float: left;
+	width: 100%;
+}
+
+
+
+.right-border {
+	background-image: url(../img/middleline.png);
+	width: 1%;
+	height: 95%;
+	float: left;
+	background-repeat: no-repeat;
+}
+
+.left-div {
+	width: 29%;
+	float: left;
+	height: 100%;
+}
+
+.left-div-1 {
+	float: left;
+    width: 100%;
+    height: 32.8%;
+    padding-top: 3%;
+}
+
+.left-div-2 {
+float: left;
+    width: 100%;
+    height: 36.09%;
+    padding-top: 3%;
+}
+
+.left-div-3 {
+	float: left;
+    width: 100%;
+    height: 27.09%;
+    padding-top: 2%;
+}
+
+.center-div {
+	width: 40.06%;
+	float: left;
+	height: 100%;
+}
+
+.right-div {
+	width: 28%;
+	float: left;
+	height: 100%;
+}
+
+.right-div-1 {
+	float: left;
+    width: 100%;
+    height: 38%;
+    padding-top: 1%;
+}
+
+.right-div-2 {
+	float: left;
+    width: 100%;
+    height: 41%;
+    padding-top: 2%;
+}
+
+.right-div-3 {
+	float: left;
+    width: 100%;
+    height: 18%;
+    margin-top: 1%;
+}
+
+
+
+.frequency {
+	float: left;
+	width: 23%;
+	height: 100%;
+	margin-top: 1%;
+	text-align: center;
+}
+
+.frequency-border {
+	background-image: url(../img/middleline.png);
+    width: 1%;
+    height: 78%;
+    float: left;
+    background-repeat: no-repeat;
+}
+.datatabgroup{
+	height: 87.753788%;
+    /* border-right: 0.07em solid #C5C6C6; */
+    border: 0.07em solid #c6c6c6;
+    /* padding-left: 1%; */
+    width: 96%;
+    margin: 2%;
+    margin-top: unset;
+    border-radius: 1em;
+}
+.center-div-val {
+	margin: 10% 3%;
+	height: 15px;
+	font-size: 80%;
+	width: 85%;
+	text-align: center;
+}
+
+.center-div-val>input {
+	width: 95%;
+}
+
+.internal-calc-div {
+	width: 100%;
+	float: left;
+	margin-top: 5%;
+}
+
+.col-25 {
+	width: 24%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.col-25 input {
+	width: 35%;
+    font-size: 80%;
+    text-align: center;
+}
+
+.col-33 {
+	width: 32%;
+	float: left;
+	text-align: center;
+}
+.col-50right{
+	float: right !important;
+	width: 50% !important;
+}
+.col-50 {
+	width: 49%;
+    float: left;
+    text-align: center;
+    font-size: 100%;
+}
+.col-50ITC {
+	width: 49%;
+    float: left;
+    text-align: center;
+    font-size: 100%;
+}
+.col-100{
+	width: 100%;
+	height: 25%;
+}
+.col-100 > .col-25{
+	margin-left: 16%;
+    width: 17%;
+}
+.col-50 input {
+	width: 45%;
+	font-size: 80%;
+	text-align: center;
+}
+
+.col-50 input[type="button"] {
+	width: 90%;
+	font-size: 80%;
+	text-align: center;
+	margin: 2% 4%
+}
+
+.mp_radio_btns {
+	width: 15%;
+    /* padding: 3% 1%; */
+    margin: 0;
+    font-size: 80%;
+    float: left;
+    padding-top: 5%;
+    padding-left: 3%;
+}
+
+.mp_radio_btns input {
+	width: 10px;
+}
+
+.mp_div_2 {
+	width: 35%;
+    /* padding: 5% 1%; */
+    margin: 0;
+    font-size: 80%;
+    float: left;
+    text-align: left;
+    margin-top: 5%;
+}
+
+.mp_div_2_label {
+	padding: 0.3% 0;
+    width: 100%;
+    float: left;
+}
+
+.mp_div_3 {
+	width: 38%;
+    /* padding: 5% 1%; */
+    margin: 0;
+    font-size: 80%;
+    float: left;
+    text-align: center;
+}
+
+.mp_div_3_label {
+	font-size: 84%;
+    padding: 1% 0%;
+    width: 100%;
+    float: left;
+    margin-bottom: 10%;
+    border-bottom: 1px solid #cecece;
+    text-align: center;
+}
+
+.mp_div_3 input {
+	width: 10px;
+	margin: 0;
+}
+
+.ds_components {
+	width: 100%;
+    float: left;
+    margin: 2.5% 0;
+}
+
+.r_components {
+	width:100%;
+	float:left;
+	margin: 0;
+}
+
+.intr_temp_ctrl_divs {
+	width: 90%;
+    margin: 0.5% 0;
+    float: left;
+    height: 13%;
+}
+.intr_temp_ctrl_divslast {
+	width: 90%;
+    margin: 0.5% 0;
+    float: left;
+    height: 60%;
+}
+.progress-bar {
+	border-radius: 15px !important;
+	height: 12px;
+	background-color: #ffffff;
+	width: 80%;
+	float: left;
+	border: 1px solid rgb(13, 69, 96);
+}
+
+.progress-bar span {
+	float: left;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	height: 12px;
+	background: rgb(13, 69, 96);
+}
+
+.btn_submit {
+	background-color: rgb(13, 69, 96);
+	color: #ffffff;
+	font-size: 10px;
+	padding: 4% 10%;
+	border-radius: 8px;
+	border: none;
+	margin-top: 5%;
+}
+.linediv{
+	width: 100%;
+    height: 0.071%;
+    float: left;
+    height: 0.710227273%;
+    justify-content: center;
+    z-index: 1030;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.r_components_childsec {
+	width: 32%;
+	float: left;
+	text-align: center;
+}
+
+.r_components_childsec_subdiv {
+	width: 49%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.r_components_childsec_subdiv input {
+	width: 45%;
+	font-size: 80%;
+	text-align: center;
+}
+
+.r_components_childsec_subdiv input[type="button"] {
+	width: 90%;
+	font-size: 80%;
+	text-align: center;
+	margin: 2% 4%
+}
+
+.r_components_one_by_four_div {
+	width: 24%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.r_components_one_by_four_div input {
+	width: 35%;
+	font-size: 80%;
+}

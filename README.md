@@ -1,1 +1,1 @@
-# device-config
+# srd-deviceconfig

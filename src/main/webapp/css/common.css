@@ -1,0 +1,60 @@
+.buttons-group {
+	height: 9%;
+    border-right: 0.07em solid #C5C6C6;
+    border-left: 0.07em solid #C5C6C6;
+    /* padding-left: 1%; */
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.top-buttons {
+	padding: 0.5% 2%;
+    text-align: center;
+    border-radius: 5px;
+    float: left;
+    font-size: 10px !important;
+    margin-left: 1%;
+}
+
+.btn1 {
+	background-color: aquamarine;
+	margin-left: 10%;
+}
+
+.btn2 {
+	background-color: aquamarine;
+}
+
+.btn3 {
+	background-color: aquamarine;
+}
+
+.btn4 {
+	border: 1px solid aquamarine;
+}
+.circle-green {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #009933;
+	border-radius: 15px;
+	margin-left: 5px;
+}
+
+.circle-red {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: red;
+	border-radius: 15px;
+	margin-left: 5px;
+}
+/* h5 {
+	font-size: 130%;
+} */

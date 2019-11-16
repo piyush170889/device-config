@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- constant to define global resource bundle -->
+	<constant name="struts.custom.i18n.resources" value="deviceconfig"></constant>
+
+	<!-- LOGIN-LOGOUT ACTIONS -->
+	<package name="com" namespace="/" extends="json-default">
+
+		<action name="deviceconfig-home" class="com.srd.deviceconfig.action.DeviceMasterAction">
+			<result name="SUCCESS">/device-config.jsp</result>
+			<result name="ERROR">/device-config.jsp</result>
+		</action>
+
+		<action name="data-tab">
+			<result>/data-tab.jsp</result>
+		</action>
+
+		<action name="getDataTabDetailsJson" class="com.srd.deviceconfig.action.DataTabAction"
+			method="getDataTabDetailsJson">
+			<result name="SUCCESS" type="json"></result>
+		</action>
+
+		<action name="updateDataTabDetailsJson" class="com.srd.deviceconfig.action.SlnoHrW"
+			method="updateDataTabDetailsJson">
+			<result name="SUCCESS" type="redirect">data-tab</result>
+		</action>
+
+		<action name="insertFocusOutData" class="com.srd.deviceconfig.action.SlnoHrW"
+			method="insertFocusOutData">
+			<result name="SUCCESS" type="redirect">data-tab</result>
+		</action>
+
+		<action name="updateDeviceData" class="com.srd.deviceconfig.action.DeviceMasterAction"
+			method="updateDeviceData">
+			<result name="SUCCESS" type="json"></result>
+		</action>
+	</package>
+
+</struts>
