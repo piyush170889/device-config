@@ -64,6 +64,7 @@ p {
 	border-bottom: 1px solid #cecece;
 	border-right: 1px solid #cecece;
 	padding: 1%;
+	width: 1%;
 }
 
 .rt_mid_tbl {
@@ -73,6 +74,7 @@ p {
 	text-align: center;
 	overflow: scroll;
 	display: block;
+	min-height: 30%;
 	max-height: 35%;
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
@@ -86,6 +88,13 @@ p {
 .rt_mid_tbl th {
 	border-bottom: 1px solid #cecece;
 	margin-bottom: 2px;
+	padding: 8px 0;
+	width: 1%;
+}
+
+.rt_mid_tbl th img {
+	width: 16px;
+	height: 16px;
 }
 
 .rt_mid_tbl tr {
@@ -101,4 +110,18 @@ p {
 .right-upper-section {
 	width: 90% !important;
 	margin-bottom: 1% !important;
+}
+
+.right-upper-section-1 {
+	width: 14%;
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-align: center;
+}
+
+.right-upper-section input[type="text"] {
+	text-align: center;
+	width: 70%;
+	border: none;
 }

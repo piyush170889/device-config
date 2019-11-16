@@ -133,16 +133,20 @@
 			<!-- Upper Header Data -->
 			<div class="init-div right-upper-section">
 
-				<div style="width: 60%; float: right;">
+				<div style="width: 70%; float: right;">
 
-					<div style="width: 19%; margin: 0; padding: 0; float: left;">
+					<div class="right-upper-section-1">
 						<p>Ab</p>
-						<p>1</p>
+						<p>
+							<input type="text" id="Ab" value="1" />
+						</p>
 					</div>
 
-					<div style="width: 19%; margin: 0; padding: 0; float: left;">
+					<div class="right-upper-section-1">
 						<p>DPhib</p>
-						<p>0</p>
+						<p>
+							<input type="text" id="DPhib" value="0" />
+						</p>
 					</div>
 
 					<div style="width: 58%; margin: 0; padding: 0; float: left;">
@@ -150,19 +154,21 @@
 							<tbody>
 								<tr>
 									<td class="no-border">a0</td>
-									<td>1</td>
-									<td>1</td>
-									<td>1</td>
-									<td>1</td>
-									<td class="no-border-right">1</td>
+									<td><input type="text" id="LMy0a0" value="1" /></td>
+									<td><input type="text" id="LMy1a0" value="1" /></td>
+									<td><input type="text" id="LMy2a0" value="1" /></td>
+									<td><input type="text" id="LMy3a0" value="1" /></td>
+									<td class="no-border-right"><input type="text" id="LMy4a0"
+										value="1" /></td>
 								</tr>
 								<tr class="no-bottom-border">
 									<td class="no-border">a6</td>
-									<td>1</td>
-									<td>1</td>
-									<td>1</td>
-									<td>1</td>
-									<td class="no-border-right">1</td>
+									<td><input type="text" id="LMy0a6" value="0" /></td>
+									<td><input type="text" id="LMy1a6" value="0" /></td>
+									<td><input type="text" id="LMy2a6" value="0" /></td>
+									<td><input type="text" id="LMy3a6" value="0" /></td>
+									<td class="no-border-right"><input type="text" id="LMy4a6"
+										value="0" /></td>
 								</tr>
 							</tbody>
 						</table>
@@ -173,7 +179,7 @@
 
 			<!-- Mid Right Section Data -->
 			<div class="init-div right-upper-section rounded-border">
-				<table class="rt_mid_tbl">
+				<table class="rt_mid_tbl" id="liset_tbl">
 					<thead>
 						<tr>
 							<th></th>
@@ -188,149 +194,10 @@
 							<th>Y2</th>
 							<th>Y3</th>
 							<th>Y4</th>
+							<th><img src="img/plus.png" onclick="addRow()" /></th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td>0.0</td>
-							<td class="no-border-right">0.0</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -605,6 +472,28 @@
 			$('#y4a3').val(y4a3);
 			$('#y4a5').val(y4a5);
 			$('#y4a8').val(y4a8);
+		}
+
+		function deleteRow(id) {
+
+			// Find and remove selected table rows
+			var idToDelete = '#' + id;
+			$(idToDelete).remove();
+		}
+
+		function addRow() {
+
+			var idToAllocate = ($('#liset_tbl tr').length ? $('#liset_tbl tr').length
+					: 0) + 1;
+			console.log('idToAllocate = ' + idToAllocate);
+
+			var markup = "<tr id='" + idToAllocate + "'><td><input type='checkbox' checked /></td><td><input type='text' name='lm[]' value='0.0' /></td><td><input type='text' name='a[]' value='0.0' /></td><td><input type='text' name='dphi[]' value='0.0' /></td><td><input type='text' name='temp[]' value='0.0' /></td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td class='no-border-right'><img src='img/garbage.png' onclick=\"deleteRow('"
+					+ idToAllocate + "')\" /></td></tr>";
+
+			console.log('markup = ' + markup);
+
+			$("#liset_tbl tbody").append(markup);
+
 		}
 	</script>
 </body>
