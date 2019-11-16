@@ -38,10 +38,16 @@
 			method="updateDeviceData">
 			<result name="SUCCESS" type="json"></result>
 		</action>
-		
-		<action name="page3">
-			<result>/page3.jsp</result>
+
+		<!-- Material Tab -->
+		<action name="page3" class="com.srd.deviceconfig.action.MaterialAction">
+			<result name="SUCCESS">/page3.jsp</result>
 		</action>
+		
+		<action name="getFreqData" class="com.srd.deviceconfig.action.MaterialTableAction">
+			<result name="SUCCESS" type="json"></result>
+		</action>
+		
 	</package>
 
 </struts>

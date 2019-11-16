@@ -26,6 +26,7 @@ p {
 .tbl {
 	width: 100%;
 	border-collapse: collapse;
+	font-size: 11px;
 }
 
 .tbl th {
@@ -38,6 +39,12 @@ p {
 	text-align: center;
 	border-bottom: 1px solid #cecece;
 	padding: 1%;
+}
+
+.tbl tr td input[type="text"] {
+	text-align: center;
+	width: 70%;
+	border: none;
 }
 
 .no-border {
@@ -69,6 +76,7 @@ p {
 	max-height: 35%;
 	overflow: -moz-scrollbars-none;
 	-ms-overflow-style: none;
+	font-size: 11px;
 }
 
 .rt_mid_tbl::-webkit-scrollbar {

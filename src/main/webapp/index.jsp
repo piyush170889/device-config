@@ -127,7 +127,7 @@
 			<div class="homemiddlediv">
 				<div class="sidebar">
 					<ul>
-						<li><a href="deviceconfig-home">Home</a></li>
+						<li><a href="">Home</a></li>
 						<li><a href="data-tab" target="_blank">Data Tab</a></li>
 						<li><a href="javascript:void(0)" onclick="loadPage('page3')">Page3</a></li>
 					</ul>
