@@ -129,11 +129,14 @@
 					<ul>
 						<li><a href="deviceconfig-home">Home</a></li>
 						<li><a href="data-tab" target="_blank">Data Tab</a></li>
+						<li><a href="javascript:void(0)" onclick="loadPage('page3')">Page3</a></li>
 					</ul>
 				</div>
+				
 				<!-- Div To Replace -->
 				<div id="divToReplace"></div>
 				<!-- ./Div To Replace -->
+				
 				<script>
 					var data = {};
 					loadPage('deviceconfig-home', data);
