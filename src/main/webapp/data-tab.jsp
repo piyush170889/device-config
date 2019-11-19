@@ -30,7 +30,6 @@
 			<!-- Copy -->
 
 
-
 			<!-- My start -->
 			<div class="argmenunavbar">
 				<!-- <nav
@@ -94,9 +93,8 @@
 				<%-- <a href="logout" class="logoutbuttonlabel">Logout ${sessionScope.userName}</a> --%>
 				<a class="logoutbuttonlabel" href="logout"> <img class="img"
 					src="img/power-off.png" alt=""></a>
-
 			</div>
-			
+
 		</div>
 		<div class="argheadeliner">
 			<img class='headerfixline' src="img/line.png" />
@@ -152,35 +150,33 @@
 								<label>Dry</label>
 							</div>
 
-							<div class="col-50 margin-top-4">
+							<div class="col-50">
 								<label class="mp_div_3_label" id="mp_moist_perc_wet">0.0</label>
 							</div>
-							<div class="col-50 margin-top-4">
+							<div class="col-50">
 								<label class="mp_div_3_label" id="mp_moist_perc_dry">0.0</label>
 							</div>
 
-							<div class="col-50 margin-top-4">
+							<div class="mp_val">
 								<label class="mp_div_3_label" id="mp_mat_Temp_wet">0.0</label>
 							</div>
-							<div class="col-50 margin-top-4">
+							<!-- <div class="col-50 margin-top-4">
 								<label class="mp_div_3_label" id="mp_mat_Temp_dry">0.0</label>
-							</div>
+							</div> -->
 
-							<div class="col-50 margin-top-4">
+							<div class="mp_val margin-top-4">
 								<label id="mp_mat_density_wet" class="mp_div_3_label">0.0</label>
 							</div>
-							<div class="col-50 margin-top-4">
+							<!-- <div class="col-50 margin-top-4">
 								<label id="mp_mat_density_dry" class="mp_div_3_label">0.0</label>
-							</div>
+							</div> -->
 
 
-							<div class="col-50 margin-top-9">
-								<input type="radio" value="modbus" class="margin-top-4">
-								Modbus 1
+							<div class="col-50">
+								<input type="radio" value="modbus"> Modbus 1
 							</div>
-							<div class="col-50 margin-top-9">
-								<input type="radio" value="modbus" class="margin-top-4">
-								4-20 mA
+							<div class="col-50">
+								<input type="radio" value="modbus"> 4-20 mA
 							</div>
 
 
@@ -272,28 +268,28 @@
 						</h5>
 
 						<div class="ds_components">
-							<div class="col-25">
+							<div class="ds_components_label">
 								<label>Zero Avg. Time :</label>
 							</div>
-							<div class="col-25">
+							<div class="ds_components_inputs">
 								<input type="text" id="ds_average_time_zero"
 									onkeyup="updateCalibrationValue(event, 'ds_average_time_zero');" /><br />
 							</div>
 							<!-- 	</div> -->
-							<div class="col-25">
+							<div class="ds_components_label">
 								<label>Normal Avg. Time :</label>
 							</div>
-							<div class="col-25">
+							<div class="ds_components_inputs">
 								<input type="text" id="ds_normal_Avg_time"
 									onkeyup="updateCalibrationValue(event, 'ds_normal_Avg_time');" /><br />
 							</div>
 						</div>
 
 						<div class="ds_components">
-							<div class="col-25">
+							<div class="ds_components_label">
 								<label>Detector Avg. Time :</label><br />
 							</div>
-							<div class="col-25">
+							<div class="ds_components_inputs">
 								<input type="text" id="ds_det_Avg_time"
 									onkeyup="updateCalibrationValue(event, 'ds_det_Avg_time');" /><br />
 							</div>
@@ -549,7 +545,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>d :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_coeffD"
 										onkeyup="updateCalibrationValue(event, 'ce_coeffD');" /><br />
 								</div>
@@ -558,7 +554,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>Rho :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_rho"
 										onkeyup="updateCalibrationValue(event, 'ce_rho');" /><br />
 								</div>
@@ -567,7 +563,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>Ch1Alpha0 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_ch1Alpha0"
 										onkeyup="updateCalibrationValue(event, 'ce_ch1Alpha0');" /><br />
 								</div>
@@ -579,7 +575,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a1 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a1"
 										onkeyup="updateCalibrationValue(event, 'ce_a1');" /><br />
 								</div>
@@ -588,7 +584,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a2 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a2"
 										onkeyup="updateCalibrationValue(event, 'ce_a2');" /><br />
 								</div>
@@ -597,7 +593,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>Ch1Beta0 :</label>
 								</div>
-								<div class="col-50">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_ch1_Beta0"
 										onkeyup="updateCalibrationValue(event, 'ce_ch1_Beta0');" /><br />
 								</div>
@@ -609,7 +605,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a3 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a3"
 										onkeyup="updateCalibrationValue(event, 'ce_a3');" /><br />
 								</div>
@@ -618,7 +614,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a8 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a8"
 										onkeyup="updateCalibrationValue(event, 'ce_a8');" /><br />
 								</div>
@@ -627,7 +623,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>Ch2Alpha0 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_ch2Alpha0"
 										onkeyup="updateCalibrationValue(event, 'ce_ch2Alpha0');" /><br />
 								</div>
@@ -640,7 +636,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a0 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a0"
 										onkeyup="updateCalibrationValue(event, 'ce_a0');" /><br />
 								</div>
@@ -649,7 +645,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a5 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a5"
 										onkeyup="updateCalibrationValue(event, 'ce_a5');" /><br />
 								</div>
@@ -658,7 +654,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>Ch2Beta0 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_ch2Beta0"
 										onkeyup="updateCalibrationValue(event, 'ce_ch2Beta0');" /><br />
 								</div>
@@ -670,7 +666,7 @@
 								<div class="r_components_childsec_subdiv">
 									<label>a6 :</label>
 								</div>
-								<div class="r_components_childsec_subdiv">
+								<div class="r_components_childsec_subdiv_inputs">
 									<input type="text" id="ce_a6"
 										onkeyup="updateCalibrationValue(event, 'ce_a6');" /><br />
 								</div>
@@ -717,7 +713,7 @@
 					<div class="linediv">
 						<img class="linetop" src="img/line.png" alt="linetop" />
 					</div>
-					
+
 
 					<div class="right-div-2">
 						<h5>
@@ -739,50 +735,46 @@
 							</div>
 						</div>
 
-						<h5 style="margin: 4% 0;">
+						<h5 style="margin: 2% 0;">
 							4-20 mA Limits<span></span>
 						</h5>
 
 						<div class="r_components">
-							<div class="r_components_one_by_four_div"
-								style="margin-left: 25%">
+							<div class="limits" style="margin-left: 25%">
 								<label>Max</label>
 							</div>
-							<div class="r_components_childsec_subdiv">
+							<div class="col-50">
 								<label>Min</label>
 							</div>
 						</div>
 
 						<div class="r_components">
-							<div class="r_components_childsec_subdiv"
-								style="border-right: 1px solid #cecece">
-								<div class="col-50">
-									<label>Blink : </label>
-								</div>
-								<div class="r_components_childsec_subdiv">
-									<input type="text" id="dp_blink_Range_max"
-										onkeyup="updateCalibrationValue(event, 'dp_blink_Range_max');" /><br />
-								</div>
-								<div class="r_components_childsec_subdiv">
-									<label>Ext. Temp : </label>
-								</div>
-								<div class="r_components_childsec_subdiv">
-									<input type="text" id="dp_mat_temp_Max"
-										onkeyup="updateCalibrationValue(event, 'dp_mat_temp_Max');" /><br />
-								</div>
+							<div class="limits_4_20A_label">
+								<label>Blink : </label>
 							</div>
+							<div class="limits_4_20A_label"
+								style="border-right: 1px solid #cecece;">
+								<input type="text" id="dp_blink_Range_max"
+									onkeyup="updateCalibrationValue(event, 'dp_blink_Range_max');" /><br />
+							</div>
+							<div class="limits_4_20A_min_inputs">
+								<input type="text" id="dp_blink_range_min"
+									onkeyup="updateCalibrationValue(event, 'dp_blink_range_min');" /><br />
+							</div>
+						</div>
 
-							<!-- <div class="right-border"></div> -->
-
-							<div class="r_components_childsec_subdiv">
-								<div style="width: 100%">
-									<input type="text" id="dp_blink_range_min"
-										onkeyup="updateCalibrationValue(event, 'dp_blink_range_min');" /><br />
-								</div>
-								<div style="width: 100%">
-									<input type="text" id="dp_mat_temp_min"
-										onkeyup="updateCalibrationValue(event, 'dp_mat_temp_min');" /><br />
-								</div>
+						<div class="r_components">
+							<div class="limits_4_20A_label">
+								<label>Ext. Temp : </label>
+							</div>
+							<div class="limits_4_20A_label"
+								style="border-right: 1px solid #cecece;">
+								<input type="text" type="text" id="dp_mat_temp_Max"
+									onkeyup="updateCalibrationValue(event, 'dp_mat_temp_Max');" /><br />
+							</div>
+							<div class="limits_4_20A_min_inputs">
+								<input type="text" id="dp_mat_temp_min"
+									onkeyup="updateCalibrationValue(event, 'dp_mat_temp_min');" /><br />
 							</div>
 						</div>
 
@@ -798,10 +790,10 @@
 						</h5>
 
 						<div class="r_components" style="margin: 0.5% 0 0% 0;">
-							<div class="r_components_childsec_subdiv">
+							<div class="remaining_time">
 								<label>Remaining Time: </label>
 							</div>
-							<div class="r_components_childsec_subdiv">
+							<div class="remaining_time">
 								<div class="progress-bar">
 									<span id="progress-bar-span" style="width: 0%"></span>
 								</div>
@@ -809,11 +801,11 @@
 						</div>
 
 						<div class="r_components">
-							<div class="r_components_childsec_subdiv">
+							<div class="calibration_btns">
 								<input type="button" value="Start Calibration 0"
 									onclick="startCalibration(0)" class="btn_submit" />
 							</div>
-							<div class="r_components_childsec_subdiv">
+							<div class="calibration_btns">
 								<input type="button" value="Start Calibration 1"
 									onclick="startCalibration(1)" class="btn_submit" /> <input
 									type="hidden" id="progress-bar-activity" value="0" />
@@ -829,12 +821,8 @@
 			<img class='footerfixline' src="img/line.png" />
 		</div>
 		<div class="argfooter" style="">
-			
-			<div class="argfootertext ftrfix-rg">
 
-			
-
-			</div>
+			<div class="argfootertext ftrfix-rg"></div>
 
 		</div>
 	</div>

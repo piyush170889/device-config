@@ -36,9 +36,9 @@ function getDataTabDetailsJson() {
 
 					!activeElementId || (activeElementId && activeElementId != 'itc_p') ? $('#itc_p').val(data.slnoHrR.p) : console.log('active::itc_p');
 
-					!activeElementId || (activeElementId && activeElementId != 'itc_i') ? $('#itc_i').val(data.slnoIrR.i) : console.log('active::itc_i');
+					!activeElementId || (activeElementId && activeElementId != 'itc_i') ? $('#itc_i').val(data.slnoHrR.i) : console.log('active::itc_i');
 
-					!activeElementId || (activeElementId && activeElementId != 'itc_d') ? $('#itc_d').val(data.slnoIrR.d) : console.log('active::itc_d');
+					!activeElementId || (activeElementId && activeElementId != 'itc_d') ? $('#itc_d').val(data.slnoHrR.d) : console.log('active::itc_d');
 
 					// Device Settings Parameters
 					!activeElementId || (activeElementId && activeElementId != 'ds_average_time_zero') ? $('#ds_average_time_zero').val(data.slnoHrR.average_time_zero)	: console.log('active::ds_average_time_zero');

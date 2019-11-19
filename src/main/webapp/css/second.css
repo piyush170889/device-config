@@ -8,7 +8,7 @@ body {
 
 h5 {
 	padding: 0;
-	margin: 5px 0;
+	margin: 2px 0 4px 0;
 	text-align: center;
 	color: rgb(13, 69, 96);
 	font-size: 14px;
@@ -19,7 +19,7 @@ h5 span {
 	background-color: black;
 	height: 2px;
 	width: 10%;
-	margin: 1% 44%;
+	margin: 0 44%;
 }
 
 .actualdiv {
@@ -29,15 +29,13 @@ h5 span {
 }
 
 .linetop {
-	width: 50%;	
+	width: 50%;
 }
 
 .linetop>img {
 	float: left;
 	width: 100%;
 }
-
-
 
 .right-border {
 	background-image: url(../img/middleline.png);
@@ -55,23 +53,23 @@ h5 span {
 
 .left-div-1 {
 	float: left;
-    width: 100%;
-    height: 32.8%;
-    padding-top: 3%;
+	width: 100%;
+	height: 32.8%;
+	margin-top: 1%;
 }
 
 .left-div-2 {
-float: left;
-    width: 100%;
-    height: 36.09%;
-    padding-top: 3%;
+	float: left;
+	width: 100%;
+	height: 34.09%;
+	margin-top: 2%;
 }
 
 .left-div-3 {
 	float: left;
-    width: 100%;
-    height: 27.09%;
-    padding-top: 2%;
+	width: 100%;
+	height: 27.09%;
+	margin-top: 2%;
 }
 
 .center-div {
@@ -88,52 +86,51 @@ float: left;
 
 .right-div-1 {
 	float: left;
-    width: 100%;
-    height: 38%;
-    padding-top: 1%;
+	width: 100%;
+	height: 43%;
+	padding-top: 1%;
 }
 
 .right-div-2 {
 	float: left;
-    width: 100%;
-    height: 41%;
-    padding-top: 2%;
+	width: 100%;
+	height: 35%;
+	padding-top: 2%;
 }
 
 .right-div-3 {
 	float: left;
-    width: 100%;
-    height: 18%;
-    margin-top: 1%;
+	width: 100%;
+	height: 18%;
+	margin-top: 1%;
 }
-
-
 
 .frequency {
 	float: left;
 	width: 23%;
 	height: 100%;
-	margin-top: 1%;
 	text-align: center;
 }
 
 .frequency-border {
 	background-image: url(../img/middleline.png);
-    width: 1%;
-    height: 78%;
-    float: left;
-    background-repeat: no-repeat;
+	width: 1%;
+	height: 78%;
+	float: left;
+	background-repeat: no-repeat;
 }
-.datatabgroup{
+
+.datatabgroup {
 	height: 87.753788%;
-    /* border-right: 0.07em solid #C5C6C6; */
-    border: 0.07em solid #c6c6c6;
-    /* padding-left: 1%; */
-    width: 96%;
-    margin: 2%;
-    margin-top: unset;
-    border-radius: 1em;
+	/* border-right: 0.07em solid #C5C6C6; */
+	border: 0.07em solid #c6c6c6;
+	/* padding-left: 1%; */
+	width: 96%;
+	margin: 2%;
+	margin-top: unset;
+	border-radius: 1em;
 }
+
 .center-div-val {
 	margin: 10% 3%;
 	height: 15px;
@@ -143,13 +140,14 @@ float: left;
 }
 
 .center-div-val>input {
-	width: 95%;
+	width: 80%;
+	text-align: center;
 }
 
 .internal-calc-div {
 	width: 100%;
 	float: left;
-	margin-top: 5%;
+	margin-top: 1%;
 }
 
 .col-25 {
@@ -161,8 +159,8 @@ float: left;
 
 .col-25 input {
 	width: 35%;
-    font-size: 80%;
-    text-align: center;
+	font-size: 80%;
+	text-align: center;
 }
 
 .col-33 {
@@ -170,30 +168,36 @@ float: left;
 	float: left;
 	text-align: center;
 }
-.col-50right{
+
+.col-50right {
 	float: right !important;
 	width: 50% !important;
 }
+
 .col-50 {
 	width: 49%;
-    float: left;
-    text-align: center;
-    font-size: 100%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
 }
+
 .col-50ITC {
 	width: 49%;
-    float: left;
-    text-align: center;
-    font-size: 100%;
+	float: left;
+	text-align: center;
+	font-size: 85%;
 }
-.col-100{
+
+.col-100 {
 	width: 100%;
 	height: 25%;
 }
-.col-100 > .col-25{
+
+.col-100>.col-25 {
 	margin-left: 16%;
-    width: 17%;
+	width: 17%;
 }
+
 .col-50 input {
 	width: 45%;
 	font-size: 80%;
@@ -209,12 +213,17 @@ float: left;
 
 .mp_radio_btns {
 	width: 15%;
-    /* padding: 3% 1%; */
-    margin: 0;
-    font-size: 80%;
-    float: left;
-    padding-top: 5%;
-    padding-left: 3%;
+	/* padding: 3% 1%; */
+	margin: 0;
+	font-size: 80%;
+	float: left;
+	padding-top: 5%;
+	padding-left: 3%;
+}
+
+.mp_radio_btns select {
+	width: 80%;
+	font-size: 80%;
 }
 
 .mp_radio_btns input {
@@ -223,68 +232,89 @@ float: left;
 
 .mp_div_2 {
 	width: 35%;
-    /* padding: 5% 1%; */
-    margin: 0;
-    font-size: 80%;
-    float: left;
-    text-align: left;
-    margin-top: 5%;
+	/* padding: 5% 1%; */
+	margin: 0;
+	font-size: 80%;
+	float: left;
+	text-align: left;
+	margin-top: 5%;
 }
 
 .mp_div_2_label {
 	padding: 0.3% 0;
-    width: 100%;
-    float: left;
+	width: 100%;
+	float: left;
 }
 
 .mp_div_3 {
 	width: 38%;
-    /* padding: 5% 1%; */
-    margin: 0;
-    font-size: 80%;
-    float: left;
-    text-align: center;
+	/* padding: 5% 1%; */
+	margin: 0;
+	font-size: 80%;
+	float: left;
+	text-align: center;
 }
 
 .mp_div_3_label {
 	font-size: 84%;
-    padding: 1% 0%;
-    width: 100%;
-    float: left;
-    margin-bottom: 10%;
-    border-bottom: 1px solid #cecece;
-    text-align: center;
+	padding: 1% 0%;
+	width: 100%;
+	float: left;
+	margin-bottom: 4%;
+	border-bottom: 1px solid #cecece;
+	text-align: center;
 }
 
 .mp_div_3 input {
 	width: 10px;
-	margin: 0;
+	margin: 8% 0 0 0;
 }
 
 .ds_components {
 	width: 100%;
-    float: left;
-    margin: 2.5% 0;
+	float: left;
+	margin: 2.5% 0;
+}
+
+.ds_components_label {
+	width: 35%;
+	font-size: 80%;
+	float: left;
+	text-align: center
+}
+
+.ds_components_inputs {
+	width: 10%;
+	font-size: 80%;
+	float: left;
+	text-align: center
+}
+
+.ds_components_inputs input {
+	width: 75%;
+	text-align: center;
 }
 
 .r_components {
-	width:100%;
-	float:left;
+	width: 100%;
+	float: left;
 	margin: 0;
 }
 
 .intr_temp_ctrl_divs {
 	width: 90%;
-    margin: 0.5% 0;
-    float: left;
-    height: 13%;
+	margin: 0.5% 0;
+	float: left;
+	height: 13%;
 }
+
 .intr_temp_ctrl_divslast {
 	width: 90%;
-    margin: 0.5% 0;
-    float: left;
-    height: 60%;
+	margin: 0.5% 0;
+	float: left;
+	height: 60%;
 }
+
 .progress-bar {
 	border-radius: 15px !important;
 	height: 12px;
@@ -311,33 +341,41 @@ float: left;
 	border: none;
 	margin-top: 5%;
 }
-.linediv{
+
+.linediv {
 	width: 100%;
-    height: 0.071%;
-    float: left;
-    height: 0.710227273%;
-    justify-content: center;
-    z-index: 1030;
-    align-items: center;
-    display: flex;
-    text-align: center;
+	height: 0.071%;
+	float: left;
+	height: 0.710227273%;
+	justify-content: center;
+	z-index: 1030;
+	align-items: center;
+	display: flex;
+	text-align: center;
 }
 
 .r_components_childsec {
-	width: 32%;
+	width: 28%;
 	float: left;
 	text-align: center;
 }
 
 .r_components_childsec_subdiv {
-	width: 49%;
+	width: 75%;
 	float: left;
 	text-align: center;
 	font-size: 80%;
 }
 
-.r_components_childsec_subdiv input {
-	width: 45%;
+.r_components_childsec_subdiv_inputs {
+	width: 20%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.r_components_childsec_subdiv_inputs input {
+	width: 100%;
 	font-size: 80%;
 	text-align: center;
 }
@@ -350,7 +388,7 @@ float: left;
 }
 
 .r_components_one_by_four_div {
-	width: 24%;
+	width: 16%;
 	float: left;
 	text-align: center;
 	font-size: 80%;
@@ -358,5 +396,55 @@ float: left;
 
 .r_components_one_by_four_div input {
 	width: 35%;
+	font-size: 80%;
+}
+
+.mp_val {
+	width: 100%;
+	text-align: center;
+	font-size: 100%;
+}
+
+.limits {
+	border-right: 1px solid #cecece;
+	width: 25%;
+	float: left;
+	font-size: 80%;
+}
+
+.limits_4_20A_label {
+	width: 25%;
+	float: left;
+	font-size: 80%;
+}
+
+.limits_4_20A_label input {
+	width: 47%;
+	text-align: center;
+}
+
+.limits_4_20A_min_inputs {
+	width: 49%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.limits_4_20A_min_inputs input {
+	width: 30%;
+	text-align: center;
+}
+
+.remaining_time {
+	width: 50%;
+	float: left;
+	text-align: center;
+	font-size: 80%;
+}
+
+.calibration_btns {
+	width: 50%;
+	float: left;
+	text-align: center;
 	font-size: 80%;
 }
