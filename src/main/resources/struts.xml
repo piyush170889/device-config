@@ -43,11 +43,19 @@
 		<action name="page3" class="com.srd.deviceconfig.action.MaterialAction">
 			<result name="SUCCESS">/page3.jsp</result>
 		</action>
-		
+
 		<action name="getFreqData" class="com.srd.deviceconfig.action.MaterialTableAction">
 			<result name="SUCCESS" type="json"></result>
 		</action>
-		
+
+		<action name="uploadValues" class="com.srd.deviceconfig.action.SlnoHrW" method="uploadValues">
+			<result name="SUCCESS" type="json"></result>
+		</action>
 	</package>
 
+	<package name="autocalculate" namespace="/" extends="struts-default,json-default">
+		<action name="autocalculate" class="com.srd.deviceconfig.action.Autocalculate">
+			<result name="SUCCESS" type="json"></result>
+		</action>
+	</package>
 </struts>

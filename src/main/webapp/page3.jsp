@@ -81,7 +81,8 @@
 							<td><input type="text" id="y0a3" value="0.0" /></td>
 							<td><input type="text" id="y0a5" value="0.0" /></td>
 							<td><input type="text" id="y0a8" value="0.0" /></td>
-							<td><input type="checkbox" /></td>
+							<td><input type="radio" onclick="updateUploadValues('y0')"
+								name="elementToUpload" /></td>
 						</tr>
 						<tr>
 							<td>Y1</td>
@@ -90,7 +91,8 @@
 							<td><input type="text" id="y1a3" value="0.0" /></td>
 							<td><input type="text" id="y1a5" value="0.0" /></td>
 							<td><input type="text" id="y1a8" value="0.0" /></td>
-							<td><input type="checkbox" /></td>
+							<td><input type="radio" onclick="updateUploadValues('y1')"
+								name="elementToUpload" /></td>
 						</tr>
 						<tr>
 							<td>Y2</td>
@@ -99,7 +101,8 @@
 							<td><input type="text" id="y2a3" value="0.0" /></td>
 							<td><input type="text" id="y2a5" value="0.0" /></td>
 							<td><input type="text" id="y2a8" value="0.0" /></td>
-							<td><input type="checkbox" /></td>
+							<td><input type="radio" onclick="updateUploadValues('y2')"
+								name="elementToUpload" /></td>
 						</tr>
 						<tr>
 							<td>Y3</td>
@@ -108,7 +111,8 @@
 							<td><input type="text" id="y3a3" value="0.0" /></td>
 							<td><input type="text" id="y3a5" value="0.0" /></td>
 							<td><input type="text" id="y3a8" value="0.0" /></td>
-							<td><input type="checkbox" /></td>
+							<td><input type="radio" onclick="updateUploadValues('y3')"
+								name="elementToUpload" /></td>
 						</tr>
 						<tr class="no-bottom-border">
 							<td>Y4</td>
@@ -117,7 +121,8 @@
 							<td><input type="text" id="y4a3" value="0.0" /></td>
 							<td><input type="text" id="y4a5" value="0.0" /></td>
 							<td><input type="text" id="y4a8" value="0.0" /></td>
-							<td><input type="checkbox" /></td>
+							<td><input type="radio" onclick="updateUploadValues('y4')"
+								name="elementToUpload" /></td>
 						</tr>
 					</tbody>
 				</table>
@@ -179,32 +184,34 @@
 
 			<!-- Mid Right Section Data -->
 			<div class="init-div right-upper-section rounded-border">
-				<table class="rt_mid_tbl" id="liset_tbl">
-					<thead>
-						<tr>
-							<th></th>
-							<th>LM</th>
-							<th>A</th>
-							<th>DPhi</th>
-							<th>Temp</th>
-							<th>Ac</th>
-							<th>DPhic</th>
-							<th>Y0</th>
-							<th>Y1</th>
-							<th>Y2</th>
-							<th>Y3</th>
-							<th>Y4</th>
-							<th><img src="img/plus.png" onclick="addRow()" /></th>
-						</tr>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
+				<form id="rt_mid_tbl_submit">
+					<table class="rt_mid_tbl" id="liset_tbl">
+						<thead>
+							<tr>
+								<th></th>
+								<th>LM</th>
+								<th>A</th>
+								<th>DPhi</th>
+								<th>Temp</th>
+								<th>Ac</th>
+								<th>DPhic</th>
+								<th>Y0</th>
+								<th>Y1</th>
+								<th>Y2</th>
+								<th>Y3</th>
+								<th>Y4</th>
+								<th><img src="img/plus.png" onclick="addRow()" /></th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</form>
 			</div>
 			<!-- Mid Right Section Data -->
 
 			<!-- Lower Upper Section -->
-			<div style="height: 10%; width: 100%; float: left;">
+			<div style="height: 12%; width: 100%; float: left;">
 
 				<div style="width: 50%; float: left;">
 					<div
@@ -212,20 +219,21 @@
 						d</div>
 					<div
 						style="width: 75%; height: 48%; float: left; text-align: center;">
-						<input type="text" style="width: 90%" />
+						<input type="text" style="width: 30%" id="rb_d_1" value="0.0" />
 					</div>
 					<div
 						style="width: 25%; height: 48%; float: left; text-align: center;">
 						rho</div>
 					<div
 						style="width: 75%; height: 48%; float: left; text-align: center;">
-						<input type="text" style="width: 90%" />
+						<input type="text" style="width: 30%" id="rb_rho_1" value="0.0" />
 					</div>
 				</div>
 
 				<div style="width: 50%; float: left;">
 					<div style="width: 100%; float: right; float: left;">
-						<input type="submit" value="Auto Calculate"
+						<input type="submit" onclick="autoCalculate()"
+							value="Auto Calculate"
 							style="margin: 5% 5% 0 0; float: right; border: 1px solid #cecece; background: #fff; border-radius: 5px;" />
 					</div>
 				</div>
@@ -242,7 +250,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_d" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -250,7 +258,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_rho" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -258,7 +266,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch1Alpha" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -266,7 +274,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch1s" />
 				</div>
 			</div>
 
@@ -277,7 +285,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a1" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -285,7 +293,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a2" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -293,7 +301,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch1Beta" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -301,7 +309,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch1n" />
 				</div>
 			</div>
 
@@ -312,7 +320,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a3" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -320,7 +328,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a8" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -328,7 +336,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch2Alpha" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -336,7 +344,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch2s" />
 				</div>
 			</div>
 
@@ -347,7 +355,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a0" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -355,7 +363,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a5" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -363,7 +371,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch2Beta" />
 				</div>
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
@@ -371,7 +379,7 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_ch2n" />
 				</div>
 			</div>
 
@@ -382,7 +390,15 @@
 				<div
 					style="width: 12%; height: 48%; float: left; text-align: center;">
 					<input type="text" style="width: 90%; text-align: center;"
-						value="0.0" />
+						value="0.0" id="rb_a6" />
+				</div>
+			</div>
+
+
+			<div style="width: 50%; float: right;">
+				<div style="width: 100%; float: right; float: left;">
+					<input type="submit" onclick="uploadValues()" value="Upload"
+						style="margin: 5% 5% 0 0; float: right; border: 1px solid #cecece; background: #fff; border-radius: 5px;" />
 				</div>
 			</div>
 			<!-- ./Lower Bottom Section -->
@@ -485,15 +501,366 @@
 
 			var idToAllocate = ($('#liset_tbl tr').length ? $('#liset_tbl tr').length
 					: 0) + 1;
-			console.log('idToAllocate = ' + idToAllocate);
 
-			var markup = "<tr id='" + idToAllocate + "'><td><input type='checkbox' checked /></td><td><input type='text' name='lm[]' value='0.0' /></td><td><input type='text' name='a[]' value='0.0' /></td><td><input type='text' name='dphi[]' value='0.0' /></td><td><input type='text' name='temp[]' value='0.0' /></td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td class='no-border-right'><img src='img/garbage.png' onclick=\"deleteRow('"
-					+ idToAllocate + "')\" /></td></tr>";
+			var ac = 0.0 + parseFloat($('#Ab').val());
+
+			//TODO: Calculate Proper `DPhic`
+			var dphic = (0.0 + parseFloat($('#DPhib').val())) % 1;
+
+			var y0 = calculateY0(ac);
+
+			var y1 = calculateY1(dphic);
+
+			var y2 = calculateY2(ac, dphic);
+
+			//TODO: Calculate y3
+			var y3 = calculateY3();
+
+			var y4 = calculateY4(ac, dphic);
+
+			console.log('idToAllocate = ' + idToAllocate + ', ac = ' + ac
+					+ ', dphic = ' + dphic + ', y0 = ' + y0 + ', y1 = ' + y1
+					+ ', y2 = ' + y2 + ', y3 = ' + y3 + ', y4 = ' + y4);
+
+			var markup = createMarkUpToAppendToTable(idToAllocate, ac, dphic,
+					y0, y1, y2, y3, y4);
 
 			console.log('markup = ' + markup);
 
 			$("#liset_tbl tbody").append(markup);
 
+		}
+
+		function createMarkUpToAppendToTable(idToAllocate, ac, dphic, y0, y1,
+				y2, y3, y4) {
+			var markup = "<tr id='" + idToAllocate + "'>"
+					+ getTableRowMarkUp(idToAllocate, 0.0, 0.0, 0.0, 0.0, ac,
+							dphic, y0, y1, y2, y3, y4) + "</tr>";
+
+			return markup;
+		}
+
+		function getTableRowMarkUp(idToAllocate, lm, a, dphi, temp, ac, dphic,
+				y0, y1, y2, y3, y4) {
+
+			return "<td><input type='checkbox' checked /></td><td><input type='number' name='lm[]' value='" + lm + "' class='lmcls' /></td><td><input type='number' name='a[]' class='acls' value='"
+					+ a
+					+ "' onkeyup='updateRowValue("
+					+ idToAllocate
+					+ ")' /></td><td><input type='number' name='dphi[]' class='dphicls' value='"
+					+ dphi
+					+ "' onkeyup='updateRowValue("
+					+ idToAllocate
+					+ ")' /></td><td><input type='number' name='temp[]' value='"+temp+"' class='tempcls' /></td><td class='accls'>"
+					+ ac
+					+ "</td><td class='dphiccls'>"
+					+ dphic
+					+ "</td><td>"
+					+ "<input type='number' readonly name=y0[] value='" + y0 + "' class='y0cls' />"
+					+ "</td><td>"
+					+ "<input type='number' readonly name=y1[] value='" + y1 + "' class='y1cls' />"
+					+ "</td><td>"
+					+ "<input type='number' readonly name=y2[] value='" + y2 + "' class='y2cls' />"
+					+ "</td><td>"
+					+ "<input type='number' readonly name=y3[] value='" + y3 + "' class='y3cls' />"
+					+ "</td><td class='y4cls'>"
+					+ "<input type='number' readonly name=y4[] value='" + y4 + "' class='y4cls' />"
+					+ "</td><td class='no-border-right'><img src='img/garbage.png' onclick=\"deleteRow('"
+					+ idToAllocate + "')\" /></td>";
+		}
+
+		function updateRowValue(idToAllocate) {
+
+			console.log('table ID = ' + idToAllocate);
+			var tblRowId = '#' + idToAllocate;
+
+			var tblRow = $(tblRowId);
+			var a = tblRow.find('.acls').val();
+			var dphi = tblRow.find('.dphicls').val();
+
+			console.log('a = ' + a + ', dphi = ' + dphi);
+
+			var ac = parseFloat(a) + parseFloat($('#Ab').val());
+
+			//TODO: Calculate Proper `DPhic`
+			var dphic = (dphi + parseFloat($('#DPhib').val())) % 1;
+
+			var y0 = calculateY0(ac);
+
+			var y1 = calculateY1(dphic);
+
+			var y2 = calculateY2(ac, dphic);
+
+			//TODO: Calculate y3
+			var y3 = calculateY3();
+
+			var y4 = calculateY4(ac, dphic);
+
+			var lm = tblRow.find('.lmcls').val();
+
+			var temp = tblRow.find('.tempcls').val();
+
+			console.log('idToAllocate = ' + idToAllocate + ', lm = ' + lm
+					+ ', temp = ' + temp + ', ac = ' + ac + ', dphic = '
+					+ dphic + ', y0 = ' + y0 + ', y1 = ' + y1 + ', y2 = ' + y2
+					+ ', y3 = ' + y3 + ', y4 = ' + y4);
+
+			/* 			tblRow.html(getTableRowMarkUp(idToAllocate, lm, a, dphi, temp, ac,
+			 dphic, y0, y1, y2, y3, y4)); */
+
+			tblRow.find('.accls').html(ac);
+			tblRow.find('.dphiccls').html(dphic);
+			tblRow.find('.y0cls').val(y0);
+			tblRow.find('.y1cls').val(y1);
+			tblRow.find('.y2cls').val(y2);
+			tblRow.find('.y3cls').val(y3);
+			tblRow.find('.y4cls').val(y4);
+		}
+
+		function calculateY0(ac) {
+
+			// TODO: Calculate Value `T`
+			var T = 1
+
+			console.log('d = ' + parseFloat($('#rb_d_1').val()) + ', rho = '
+					+ parseFloat($('#rb_rho_1').val()));
+			var dDivideByRho = (parseFloat($('#rb_d_1').val()) * parseFloat($(
+					'#rb_rho_1').val()));
+			console.log('dDivideByRho = ' + dDivideByRho);
+
+			var y0MultiplicationFactor = ac / dDivideByRho;
+			console.log('y0MultiplicationFactor = ' + y0MultiplicationFactor);
+
+			var y0a1 = parseFloat($('#y0a1').val())
+					* Math.pow(y0MultiplicationFactor, 2);
+			var y0a2 = parseFloat($('#y0a2').val()) * y0MultiplicationFactor;
+			var y0 = (parseFloat($('#LMy0a0').val()) * (y0a1 + y0a2 + parseFloat($(
+					'#y0a3').val())))
+					+ (parseFloat($('#y0a5').val()) * T)
+					+ parseFloat($('#LMy0a6').val());
+
+			return isNaN(y0) ? 0 : y0;
+		}
+
+		function calculateY1(dphic) {
+
+			// TODO: Calculate Value `T`
+			var T = 1
+
+			var dDivideByRho = (parseFloat($('#rb_d_1').val()) * parseFloat($(
+					'#rb_rho_1').val()));
+
+			var y1MultiplicationFactor = dphic / dDivideByRho;
+			var y1a1 = parseFloat($('#y1a1').val())
+					* Math.pow(y1MultiplicationFactor, 2);
+			var y1a2 = parseFloat($('#y1a2').val()) * y1MultiplicationFactor;
+			var y1 = (parseFloat($('#LMy1a0').val()) * (y1a1 + y1a2 + parseFloat($(
+					'#y1a3').val())))
+					+ (parseFloat($('#y1a5').val()) * T)
+					+ parseFloat($('#LMy1a6').val());
+
+			return isNaN(y1) ? 0 : y1;
+		}
+
+		function calculateY2(ac, dphic) {
+
+			// TODO: Calculate Value `T`
+			var T = 1
+
+			var y2MultiplicationFactor = ac / dphic;
+			var y2a1 = parseFloat($('#y2a1').val()) * y2MultiplicationFactor;
+			var y2a2 = parseFloat($('#y2a2').val()) * y2MultiplicationFactor;
+			var y2 = (parseFloat($('#LMy2a0').val()) * (y2a1 + y2a2 + parseFloat($(
+					'#y2a3').val())))
+					+ (parseFloat($('#y2a5').val()) * T)
+					+ parseFloat($('#LMy2a6').val());
+
+			return isNaN(y2) ? 0 : y2;
+		}
+
+		function calculateY3() {
+			return 1;
+		}
+
+		function calculateY4(ac, dphic) {
+
+			// TODO: Calculate Value `T`
+			var T = 1
+
+			var y4MultiplicationFactor = (((parseFloat($('#y4a1').val()) * ac) - (parseFloat($(
+					'#y4a2').val()) * dphic)) / ((parseFloat($('#y4a3').val()) * dphic) - (parseFloat($(
+					'#y4a8').val()) * ac)));
+			var y4 = (parseFloat($('#LMy4a0').val()) * y4MultiplicationFactor)
+					+ (parseFloat($('#y4a5').val()) * T)
+					+ parseFloat($('#LMy4a6').val());
+
+			return isNaN(y4) ? 0 : y4;
+		}
+
+		function updateUploadValues(elem) {
+			console.log('Element Selected = ' + elem);
+			var a0, a1, a2, a3, a5, a6, a8, ch1Alpha, ch2Alpha, ch1Beta, ch2Beta, ch1s, ch2s, ch1n, ch2n;
+
+			switch (elem) {
+			case 'y0':
+				a0 = $('#LMy0a0').val();
+				a1 = $('#y0a1').val();
+				a2 = $('#y0a2').val();
+				a3 = $('#y0a3').val();
+				a5 = $('#y0a5').val();
+				a6 = $('#LMy0a6').val();
+				a8 = $('#y0a8').val();
+				console.log('Case y0 : a0=' + a0 + ', a1=' + a1 + ', a2=' + a2
+						+ ', a3=' + a3 + ', a5=' + a5 + ', a6=' + a6 + ', a8='
+						+ a8);
+				break;
+
+			case 'y1':
+				a0 = $('#LMy1a0').val();
+				a1 = $('#y1a1').val();
+				a2 = $('#y1a2').val();
+				a3 = $('#y1a3').val();
+				a5 = $('#y1a5').val();
+				a6 = $('#LMy1a6').val();
+				a8 = $('#y1a8').val();
+				console.log('Case y1: a0=' + a0 + ', a1=' + a1 + ', a2=' + a2
+						+ ', a3=' + a3 + ', a5=' + a5 + ', a6=' + a6 + ', a8='
+						+ a8);
+				break;
+
+			case 'y2':
+				a0 = $('#LMy2a0').val();
+				a1 = $('#y2a1').val();
+				a2 = $('#y2a2').val();
+				a3 = $('#y2a3').val();
+				a5 = $('#y2a5').val();
+				a6 = $('#LMy2a6').val();
+				a8 = $('#y2a8').val();
+				console.log('Case y2: a0=' + a0 + ', a1=' + a1 + ', a2=' + a2
+						+ ', a3=' + a3 + ', a5=' + a5 + ', a6=' + a6 + ', a8='
+						+ a8);
+				break;
+
+			case 'y3':
+				a0 = $('#LMy3a0').val();
+				a1 = $('#y3a1').val();
+				a2 = $('#y3a2').val();
+				a3 = $('#y3a3').val();
+				a5 = $('#y3a5').val();
+				a6 = $('#LMy3a6').val();
+				a8 = $('#y3a8').val();
+				console.log('Case y3: a0=' + a0 + ', a1=' + a1 + ', a2=' + a2
+						+ ', a3=' + a3 + ', a5=' + a5 + ', a6=' + a6 + ', a8='
+						+ a8);
+				break;
+
+			case 'y4':
+				a0 = $('#LMy4a0').val();
+				a1 = $('#y4a1').val();
+				a2 = $('#y4a2').val();
+				a3 = $('#y4a3').val();
+				a5 = $('#y4a5').val();
+				a6 = $('#LMy4a6').val();
+				a8 = $('#y4a8').val();
+				console.log('Case y4: a0=' + a0 + ', a1=' + a1 + ', a2=' + a2
+						+ ', a3=' + a3 + ', a5=' + a5 + ', a6=' + a6 + ', a8='
+						+ a8);
+				break;
+			}
+
+			var powToRaise = $('#Ab').val() / 20;
+			ch1Alpha = Math.pow(10, powToRaise);
+
+			ch2Alpha = 1;
+
+			ch1Beta = $('#DPhib').val();
+
+			ch1n = ch2n = ch2Beta = 0;
+
+			ch1s = ch2s = -1 / (2 * 3.14);
+
+			$('#rb_a0').val(a0);
+			$('#rb_a1').val(a1);
+			$('#rb_a2').val(a2);
+			$('#rb_a3').val(a3);
+			$('#rb_a5').val(a5);
+			$('#rb_a6').val(a6);
+			$('#rb_a8').val(a8);
+			$('#rb_ch1Alpha').val(ch1Alpha);
+			$('#rb_ch2Alpha').val(ch2Alpha);
+			$('#rb_ch1Beta').val(ch1Beta);
+			$('#rb_ch2Beta').val(ch2Beta);
+			$('#rb_ch1n').val(ch1n);
+			$('#rb_ch2n').val(ch2n);
+			$('#rb_ch1s').val(ch1s);
+			$('#rb_ch2s').val(ch2s);
+			$('#rb_d').val($('#rb_d_1').val());
+			$('#rb_rho').val($('#rb_rho_1').val());
+		}
+
+		function autoCalculate() {
+
+			/* var formData = $('#rt_mid_tbl_submit').serialize(); */
+			var formData = {
+				lm : $('.lmcls').val()
+			}
+			console.log('formData = ' + formData);
+
+			$.ajax({
+				type : 'POST',
+				url : "autocalculate",
+				data : formData,
+				traditional : true,
+				success : function(data) {
+
+					console.log(data);
+
+					/* 	$('#LMy0a0').val(data.y0a0);
+						$('#LMy1a0').val(data.y1a0);
+						$('#LMy2a0').val(data.y2a0);
+						$('#LMy3a0').val(data.y3a0);
+						$('#LMy4a0').val(data.y4a0);
+
+						$('#LMy0a6').val(data.y0a6);
+						$('#LMy1a6').val(data.y1a6);
+						$('#LMy2a6').val(data.y2a6);
+						$('#LMy3a6').val(data.y3a6);
+						$('#LMy4a6').val(data.y4a6); */
+				}
+			});
+		}
+
+		function uploadValues() {
+
+			var data = {
+				a0 : $('#rb_a0').val(),
+				a1 : $('#rb_a1').val(),
+				a2 : $('#rb_a2').val(),
+				a3 : $('#rb_a3').val(),
+				a5 : $('#rb_a5').val(),
+				a6 : $('#rb_a6').val(),
+				a8 : $('#rb_a8').val(),
+				coeff_d : $('#rb_d').val(),
+				rho : $('#rb_rho').val(),
+				ch1alpha0 : $('#rb_ch1Alpha').val(),
+				ch2alpha0 : $('#rb_ch2Alpha').val(),
+				ch1beta0 : $('#rb_ch1Beta').val(),
+				ch2beta0 : $('#rb_ch2Beta').val(),
+				s1 : $('#rb_ch1s').val(),
+				s2 : $('#rb_ch2s').val(),
+				n1 : $('#rb_ch1n').val(),
+				n2 : $('#rb_ch2n').val()
+			};
+			console.log(data);
+
+			$.ajax({
+				type : 'POST',
+				url : "uploadValues",
+				data : data,
+				success : function(data) {
+					console.log(data);
+				}
+			});
 		}
 	</script>
 </body>

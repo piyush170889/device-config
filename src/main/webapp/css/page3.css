@@ -47,6 +47,12 @@ p {
 	border: none;
 }
 
+.tbl tr td input[type="number"] {
+	text-align: center;
+	width: 70%;
+	border: none;
+}
+
 .no-border {
 	border: none !important;
 }
@@ -124,4 +130,18 @@ p {
 	text-align: center;
 	width: 70%;
 	border: none;
+}
+
+.right-upper-section input[type="number"] {
+	text-align: center;
+	width: 85%;
+	border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+	{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
 }

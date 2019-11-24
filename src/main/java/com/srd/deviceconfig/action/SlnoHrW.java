@@ -810,4 +810,87 @@ public class SlnoHrW {
 		return mssgToReturn;
 	}
 
+	public String uploadValues() throws SQLException {
+
+		System.out.println(this.toString());
+		String mssgToReturn = Constants.SUCCESS_MSG;
+
+		try {
+			Connection con = DbUtil.getConnection();
+
+			// Insert values into Slno_Hr_W table
+
+			String slNoIrRSql = "INSERT INTO " + CommonUtility.getDeviceTable()
+					+ "_hr_w(time_stamp, ch1alpha0, ch1beta0, ch2alpha0, "
+					+ "ch2beta0, a0, a1, a2, a3, coeff_d, a5, a6, modbus_mattemp, pll_freq1, "
+					+ "pll_freq2, average_time_zero, normal_avg_time, det_avg_time, temp_sel, "
+					+ "mval_sel, ch1_a_gain, ch1_rf_gain, mode, p, i, d, int_temp_setpoint, "
+					+ "blink_range_max, blink_range_min, mat_temp_min, mat_temp_max, ch2_a_gain, "
+					+ "ch2_rf_gain, proxi_enable, tempcont_enable, iout_calib_5_ma, iout_calib_19_ma, "
+					+ "s1, s2, n1, n2, spare, rho, a8, iz_2, iz1_2, iz2_2, qz_2, qz1_2, qz2_2) VALUES " + "('"
+					+ new Date() + "', ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "
+					+ "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+			PreparedStatement ps = con.prepareStatement(slNoIrRSql);
+			ps.setDate(1, new java.sql.Date(new Date().getTime()));
+			ps.setFloat(1, this.ch1alpha0);
+			ps.setFloat(2, this.ch1beta0);
+			ps.setFloat(3, this.ch2alpha0);
+			ps.setFloat(4, this.ch2beta0);
+			ps.setFloat(5, this.a0);
+			ps.setFloat(6, this.a1);
+			ps.setFloat(7, this.a2);
+			ps.setFloat(8, this.a3);
+			ps.setFloat(9, this.coeff_d);
+			ps.setFloat(10, this.a5);
+			ps.setFloat(11, this.a6);
+			ps.setFloat(12, this.modbus_mattemp);
+			ps.setFloat(13, this.pll_freq1);
+			ps.setFloat(14, this.pll_freq2);
+			ps.setFloat(15, this.average_time_zero);
+			ps.setFloat(16, this.normal_avg_time);
+			ps.setFloat(17, this.det_avg_time);
+			ps.setFloat(18, this.temp_sel);
+			ps.setFloat(19, this.mval_sel);
+			ps.setFloat(20, this.ch1_a_gain);
+			ps.setFloat(21, this.ch1_rf_gain);
+			ps.setFloat(22, this.mode);
+			ps.setFloat(23, this.p);
+			ps.setFloat(24, this.i);
+			ps.setFloat(25, this.d);
+			ps.setFloat(26, this.int_temp_setpoint);
+			ps.setFloat(27, this.blink_range_max);
+			ps.setFloat(28, this.blink_range_min);
+			ps.setFloat(29, this.mat_temp_min);
+			ps.setFloat(30, this.mat_temp_max);
+			ps.setInt(31, this.ch2_a_gain);
+			ps.setInt(32, this.ch2_rf_gain);
+			ps.setInt(33, this.proxi_enable);
+			ps.setInt(34, this.tempcont_enable);
+			ps.setFloat(35, this.iout_calib_5_ma);
+			ps.setFloat(36, this.iout_calib_19_ma);
+			ps.setFloat(37, this.s1);
+			ps.setFloat(38, this.s2);
+			ps.setInt(39, this.n1);
+			ps.setInt(40, this.n2);
+			ps.setInt(41, this.spare);
+			ps.setFloat(42, this.rho);
+			ps.setFloat(43, this.a8);
+			ps.setFloat(44, this.iz_2);
+			ps.setFloat(45, this.iz1_2);
+			ps.setFloat(46, this.iz2_2);
+			ps.setFloat(47, this.qz_2);
+			ps.setFloat(48, this.qz1_2);
+			ps.setFloat(49, this.qz2_2);
+
+			ps.executeUpdate();
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			mssgToReturn = Constants.ERROR_MSG;
+		}
+
+		return mssgToReturn;
+	}
+
 }
