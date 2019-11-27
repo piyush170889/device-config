@@ -800,7 +800,46 @@
 
 		function autoCalculate() {
 
-			/* var formData = $('#rt_mid_tbl_submit').serialize(); */
+			var lm = $("input[name='lm[]']")
+            .map(function(){return $(this).val();}).get();
+
+			var y0 = $("input[name='y0[]']")
+            .map(function(){return $(this).val();}).get();
+			var lry0 = linearRegression(y0, lm);
+			console.log(y0);
+			console.log('y0 = ' + y0 + ', lm = ' + lm + ', lry0 slope = ' + lry0.slope + ', intercept = ' + lry0.intercept);
+			$('#LMy0a0').val(lry0.slope);
+			$('#LMy0a6').val(lry0.intercept);
+			
+			var y1 = $("input[name='y1[]']")
+            .map(function(){return $(this).val();}).get();
+			var lry1 = linearRegression(y1, lm);
+			console.log('lry1 slope = ' + lry1.slope + ', intercept = ' + lry1.intercept);
+			$('#LMy1a0').val(lry1.slope);
+			$('#LMy1a6').val(lry1.intercept);
+			
+			var y2 = $("input[name='y2[]']")
+            .map(function(){return $(this).val();}).get();
+			var lry2 = linearRegression(y2, lm);
+			console.log('lry2 slope = ' + lry2.slope + ', intercept = ' + lry2.intercept);
+			$('#LMy2a0').val(lry2.slope);
+			$('#LMy2a6').val(lry2.intercept);
+			
+			var y3 = $("input[name='y3[]']")
+            .map(function(){return $(this).val();}).get();
+			var lry3 = linearRegression(y3, lm);
+			console.log('lry3 slope = ' + lry3.slope + ', intercept = ' + lry3.intercept);
+			$('#LMy3a0').val(lry3.slope);
+			$('#LMy3a6').val(lry3.intercept);
+			
+			var y4 = $("input[name='y4[]']")
+            .map(function(){return $(this).val();}).get();
+			var lry4 = linearRegression(y4, lm);
+			console.log('lry4 slope = ' + lry4.slope + ', intercept = ' + lry4.intercept);
+			$('#LMy4a0').val(lry4.slope);
+			$('#LMy4a6').val(lry4.intercept);
+			
+			/* var formData = $('#rt_mid_tbl_submit').serialize();
 			var formData = {
 				lm : $('.lmcls').val()
 			}
@@ -813,9 +852,9 @@
 				traditional : true,
 				success : function(data) {
 
-					console.log(data);
+					console.log(data); 
 
-					/* 	$('#LMy0a0').val(data.y0a0);
+						$('#LMy0a0').val(data.y0a0);
 						$('#LMy1a0').val(data.y1a0);
 						$('#LMy2a0').val(data.y2a0);
 						$('#LMy3a0').val(data.y3a0);
@@ -825,11 +864,35 @@
 						$('#LMy1a6').val(data.y1a6);
 						$('#LMy2a6').val(data.y2a6);
 						$('#LMy3a6').val(data.y3a6);
-						$('#LMy4a6').val(data.y4a6); */
-				}
-			});
+						$('#LMy4a6').val(data.y4a6);
+/* 				}
+			}); */
 		}
 
+		function linearRegression(y,x){
+	        var lr = {};
+	        var n = y.length;
+	        var sum_x = 0;
+	        var sum_y = 0;
+	        var sum_xy = 0;
+	        var sum_xx = 0;
+	        var sum_yy = 0;
+
+	        for (var i = 0; i < y.length; i++) {
+
+	            sum_x += x[i];
+	            sum_y += y[i];
+	            sum_xy += (x[i]*y[i]);
+	            sum_xx += (x[i]*x[i]);
+	            sum_yy += (y[i]*y[i]);
+	        } 
+
+	        lr['slope'] = (n * sum_xy - sum_x * sum_y) / (n*sum_xx - sum_x * sum_x);
+	        lr['intercept'] = (sum_y - lr.slope * sum_x)/n;
+	        lr['r2'] = Math.pow((n*sum_xy - sum_x*sum_y)/Math.sqrt((n*sum_xx-sum_x*sum_x)*(n*sum_yy-sum_y*sum_y)),2);
+
+	        return lr;
+		}
 		function uploadValues() {
 
 			var data = {
