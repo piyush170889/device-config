@@ -82,7 +82,7 @@
 							<td><input type="text" id="y0a5" value="0.0" /></td>
 							<td><input type="text" id="y0a8" value="0.0" /></td>
 							<td><input type="radio" onclick="updateUploadValues('y0')"
-								name="elementToUpload" /></td>
+								name="elementToUpload" class="rdBtnGrp" /></td>
 						</tr>
 						<tr>
 							<td>Y1</td>
@@ -92,7 +92,7 @@
 							<td><input type="text" id="y1a5" value="0.0" /></td>
 							<td><input type="text" id="y1a8" value="0.0" /></td>
 							<td><input type="radio" onclick="updateUploadValues('y1')"
-								name="elementToUpload" /></td>
+								name="elementToUpload" class="rdBtnGrp" /></td>
 						</tr>
 						<tr>
 							<td>Y2</td>
@@ -102,7 +102,7 @@
 							<td><input type="text" id="y2a5" value="0.0" /></td>
 							<td><input type="text" id="y2a8" value="0.0" /></td>
 							<td><input type="radio" onclick="updateUploadValues('y2')"
-								name="elementToUpload" /></td>
+								name="elementToUpload" class="rdBtnGrp" /></td>
 						</tr>
 						<tr>
 							<td>Y3</td>
@@ -112,7 +112,7 @@
 							<td><input type="text" id="y3a5" value="0.0" /></td>
 							<td><input type="text" id="y3a8" value="0.0" /></td>
 							<td><input type="radio" onclick="updateUploadValues('y3')"
-								name="elementToUpload" /></td>
+								name="elementToUpload" class="rdBtnGrp" /></td>
 						</tr>
 						<tr class="no-bottom-border">
 							<td>Y4</td>
@@ -122,7 +122,7 @@
 							<td><input type="text" id="y4a5" value="0.0" /></td>
 							<td><input type="text" id="y4a8" value="0.0" /></td>
 							<td><input type="radio" onclick="updateUploadValues('y4')"
-								name="elementToUpload" /></td>
+								name="elementToUpload" class="rdBtnGrp" /></td>
 						</tr>
 					</tbody>
 				</table>
@@ -143,14 +143,14 @@
 					<div class="right-upper-section-1">
 						<p>Ab</p>
 						<p>
-							<input type="text" id="Ab" value="1" />
+							<input type="text" id="Ab" value="1" onkeyup="updateAllRowValues()" />
 						</p>
 					</div>
 
 					<div class="right-upper-section-1">
 						<p>DPhib</p>
 						<p>
-							<input type="text" id="DPhib" value="0" />
+							<input type="text" id="DPhib" value="0" onkeyup="updateAllRowValues()" />
 						</p>
 					</div>
 
@@ -219,14 +219,14 @@
 						d</div>
 					<div
 						style="width: 75%; height: 48%; float: left; text-align: center;">
-						<input type="text" style="width: 30%" id="rb_d_1" value="0.0" />
+						<input type="text" onkeyup="updateAllRowValues()" style="width: 30%" id="rb_d_1" value="0.0" />
 					</div>
 					<div
 						style="width: 25%; height: 48%; float: left; text-align: center;">
 						rho</div>
 					<div
 						style="width: 75%; height: 48%; float: left; text-align: center;">
-						<input type="text" style="width: 30%" id="rb_rho_1" value="0.0" />
+						<input type="text" onkeyup="updateAllRowValues()" style="width: 30%" id="rb_rho_1" value="0.0" />
 					</div>
 				</div>
 
@@ -427,6 +427,9 @@
 					data : data,
 					success : function(response) {
 						console.log('response = ' + response);
+
+						resetFreqData();
+						
 						setFreq(response.y0a1, response.y0a2, response.y0a3,
 								response.y0a5, response.y0a8, response.y1a1,
 								response.y1a2, response.y1a3, response.y1a5,
@@ -438,7 +441,7 @@
 								response.y4a8)
 					},
 					error : function(xhr, status, error) {
-
+						console.log(error)
 					}
 				});
 			} else {
@@ -453,6 +456,11 @@
 					'0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0',
 					'0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0', '0.0',
 					'0.0');
+			
+			$('.rdBtnGrp').prop('checked', false);
+			
+			setUploadValuesRightBottom("0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", 
+					"0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0");
 		}
 
 		function setFreq(y0a1, y0a2, y0a3, y0a5, y0a8, y1a1, y1a2, y1a3, y1a5,
@@ -505,7 +513,7 @@
 			var ac = 0.0 + parseFloat($('#Ab').val());
 
 			//TODO: Calculate Proper `DPhic`
-			var dphic = (0.0 + parseFloat($('#DPhib').val())) % 1;
+			var dphic = Math.abs(((0.0 + parseFloat($('#DPhib').val())) / 1));
 
 			var y0 = calculateY0(ac);
 
@@ -571,7 +579,7 @@
 
 		function updateRowValue(idToAllocate) {
 
-			console.log('table ID = ' + idToAllocate);
+			console.log('table Row ID = ' + idToAllocate);
 			var tblRowId = '#' + idToAllocate;
 
 			var tblRow = $(tblRowId);
@@ -583,7 +591,7 @@
 			var ac = parseFloat(a) + parseFloat($('#Ab').val());
 
 			//TODO: Calculate Proper `DPhic`
-			var dphic = (dphi + parseFloat($('#DPhib').val())) % 1;
+			var dphic = Math.abs(((dphi + parseFloat($('#DPhib').val()))) / 1);
 
 			var y0 = calculateY0(ac);
 
@@ -617,6 +625,15 @@
 			tblRow.find('.y4cls').val(y4);
 		}
 
+		function updateAllRowValues() {
+			console.log('UpdateAllRowValues Called');
+			$("#liset_tbl tbody tr").each(function () {
+		        var currentRow = $(this); 
+		        console.log('Row ID = ' + currentRow.attr('id'));
+		        updateRowValue(currentRow.attr('id'));
+		    });
+		}
+		
 		function calculateY0(ac) {
 
 			// TODO: Calculate Value `T`
@@ -779,6 +796,12 @@
 
 			ch1s = ch2s = -1 / (2 * 3.14);
 
+			setUploadValuesRightBottom(a0, a1, a2, a3, a5, a6, a8, ch1Alpha, 
+					ch2Alpha, ch1Beta, ch2Beta, ch1n, ch2n, ch1s, ch2s);
+		}
+		
+		function setUploadValuesRightBottom(a0, a1, a2, a3, a5, a6, a8, ch1Alpha, 
+				ch2Alpha, ch1Beta, ch2Beta, ch1n, ch2n, ch1s, ch2s) {
 			$('#rb_a0').val(a0);
 			$('#rb_a1').val(a1);
 			$('#rb_a2').val(a2);
