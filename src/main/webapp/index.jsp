@@ -15,10 +15,14 @@
 	href="bootstrap/bootstrap.min.css" />
 <script type="text/javascript" src="js/homemanagement.js"></script>
 <script type="text/javascript" src="js/divtoreplace.js"></script>
+
+<!-- Page JS -->
+<script type="text/javascript" src="js/page3.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/first.css">
 <link rel="stylesheet" type="text/css" href="css/srd.css" />
 <link rel="stylesheet" type="text/css" href="css/common.css" />
-
+<link rel="stylesheet" type="text/css" href="css/page3.css" />
 
 </head>
 
@@ -99,7 +103,7 @@
 					src="img/power-off.png" alt=""></a>
 
 			</div>
-			
+
 		</div>
 		<div class="argheadeliner">
 			<img class='headerfixline' src="img/line.png" />
@@ -127,16 +131,28 @@
 			<div class="homemiddlediv">
 				<div class="sidebar">
 					<ul>
-						<li><a href="">Home</a></li>
+						<li><a href="javascript:void(0)" onclick="loadPage('deviceconfig-home')">Home</a></li>
 						<li><a href="data-tab" target="_blank">Data Tab</a></li>
-						<li><a href="javascript:void(0)" onclick="loadPage('page3')">Page3</a></li>
+						<li><a href="javascript:void(0)" onclick="loadPage3()">Page3</a></li>
 					</ul>
 				</div>
-				
+
 				<!-- Div To Replace -->
 				<div id="divToReplace"></div>
 				<!-- ./Div To Replace -->
-				
+
+				<!-- Pages Datastore -->
+
+				<!-- Page3 -->
+				<div class="dataStorePages" id="page3_datastore"
+					style="display: none;">
+					<jsp:include page="page3.jsp"></jsp:include>
+				</div>
+				<!-- ./Page3 -->
+
+				<!-- ./Pages Datastore -->
+
+
 				<script>
 					var data = {};
 					loadPage('deviceconfig-home', data);
@@ -152,12 +168,8 @@
 			<img class='footerfixline' src="img/line.png" />
 		</div>
 		<div class="argfooter" style="">
-			
-			<div class="argfootertext ftrfix-rg">
 
-
-
-			</div>
+			<div class="argfootertext ftrfix-rg"></div>
 
 		</div>
 

@@ -9,11 +9,20 @@ function loadPage(url, data) {
 		data : data,
 		success : function(response) {
 			$("#divToReplace").html(response);
+			$('.dataStorePages').css('display', 'none');
 		},
 		error : function(xhr, status, error) {
 
 		}
 	});
+}
+
+function loadPageLocal(pageDataStoreId) {
+	// alert(url);
+	var pageDataStoreToReplaceId = '#' + pageDataStoreId;
+
+	$("#divToReplace").html('');
+	$(pageDataStoreToReplaceId).css('display', 'block');
 }
 
 function postData(url, data) {
