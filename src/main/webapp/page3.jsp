@@ -1,22 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<div
-	style="width: 78%; margin: 0; padding: 0; float: left; border: 1px solid #cecece; border-radius: 5px; height: 100%;">
+<div class="page3-main-div">
 
-	<div
-		style="width: 38%; height: 92%; padding: 2%; margin: 0; float: left;">
+	<div class="page3-left-sec">
 
 		<!-- Material Selection Section -->
-		<div
-			style="width: 100%; margin: 0; padding: 0; height: 10%; float: left;">
-			<div style="width: 30%; float: left;">
+		<div class="page3-left-top-sec">
+			<div class="page3-left-top-sec-1">
 				<label>Material</label>
 			</div>
-			<div style="width: 60%; height: 10%; float: left;">
-				<select
-					style="width: 100%; border-bottom: 1px solid #000; border-right: none; border-left: none; border-top: none;"
-					onchange="populateFreqData()" id="material">
+			<div class="page3-left-top-sec-2">
+				<select onchange="populateFreqData()" id="material">
 
 					<option value="select">Select</option>
 					<%-- <s:iterator value="tableNames">
@@ -30,14 +25,10 @@
 		</div>
 
 		<!-- Graph Section -->
-		<div
-			style="width: 100%; margin: 0 0 2% 0; padding: 0; height: 45%; float: left; border: 1px solid #cecece; border-radius: 5px;">
-
-		</div>
+		<div class="page3-left-mid-sec"></div>
 
 		<!-- Table Section -->
-		<div
-			style="width: 100%; margin: 0; padding: 0; height: 30%; float: left;">
+		<div class="page3-bottom-sec">
 			<table class="tbl">
 				<thead>
 					<tr>
@@ -110,12 +101,12 @@
 	<div class="right-border"></div>
 
 	<!-- Right Section -->
-	<div style="width: 58%; padding: 2%; margin: 0; float: left;">
+	<div class="right-sec">
 
 		<!-- Upper Header Data -->
 		<div class="init-div right-upper-section">
 
-			<div style="width: 70%; float: right;">
+			<div class="right-upper-right-sec">
 
 				<div class="right-upper-section-1">
 					<p>Ab</p>
@@ -133,7 +124,7 @@
 					</p>
 				</div>
 
-				<div style="width: 58%; margin: 0; padding: 0; float: left;">
+				<div class="a0-a6-val-sec">
 					<table class="tbl rt_tbl">
 						<tbody>
 							<tr>
@@ -190,32 +181,25 @@
 		<!-- Mid Right Section Data -->
 
 		<!-- Lower Upper Section -->
-		<div style="height: 12%; width: 100%; float: left;">
+		<div class="right-lower-upper-sec">
 
-			<div style="width: 50%; float: left;">
-				<div
-					style="width: 25%; height: 48%; float: left; text-align: center;">
-					d</div>
-				<div
-					style="width: 75%; height: 48%; float: left; text-align: center;">
-					<input type="text" onkeyup="updateAllRowValues()"
-						style="width: 30%" id="rb_d_1" value="0.0" />
+			<div class="right-lower-upper-sec-1">
+				<div class="right-lower-upper-sec-val-1">d</div>
+				<div class="right-lower-upper-sec-val-2">
+					<input type="text" onkeyup="updateAllRowValues()" id="rb_d_1"
+						value="0.0" />
 				</div>
-				<div
-					style="width: 25%; height: 48%; float: left; text-align: center;">
-					rho</div>
-				<div
-					style="width: 75%; height: 48%; float: left; text-align: center;">
-					<input type="text" onkeyup="updateAllRowValues()"
-						style="width: 30%" id="rb_rho_1" value="0.0" />
+				<div class="right-lower-upper-sec-val-1">rho</div>
+				<div class="right-lower-upper-sec-val-2">
+					<input type="text" onkeyup="updateAllRowValues()" id="rb_rho_1"
+						value="0.0" />
 				</div>
 			</div>
 
-			<div style="width: 50%; float: left;">
-				<div style="width: 100%; float: right; float: left;">
+			<div class="right-lower-upper-sec-2">
+				<div class="auto-btn-div">
 					<input type="submit" onclick="autoCalculate()"
-						value="Auto Calculate"
-						style="margin: 5% 5% 0 0; float: right; border: 1px solid #cecece; background: #fff; border-radius: 5px;" />
+						value="Auto Calculate" />
 				</div>
 			</div>
 
@@ -224,162 +208,98 @@
 
 
 		<!-- Lower Bottom Section -->
-		<div style="height: 5%; width: 100%; float: left;">
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				d</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_d" />
+		<div class="right-lower-bottom-sec">
+			<div class="right-lower-bottom-sec-label-value">d</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_d" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				rho</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_rho" />
+			<div class="right-lower-bottom-sec-label-value">rho</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_rho" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch1Alpha0</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch1Alpha" />
+			<div class="right-lower-bottom-sec-label-value">Ch1Alpha0</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch1Alpha" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch1s</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch1s" />
+			<div class="right-lower-bottom-sec-label-value">Ch1s</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch1s" />
 			</div>
 		</div>
 
-		<div style="height: 5%; width: 100%; float: left;">
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				a1</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a1" />
+		<div class="right-lower-bottom-sec">
+			<div class="right-lower-bottom-sec-label-value">a1</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a1" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				a2</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a2" />
+			<div class="right-lower-bottom-sec-label-value">a2</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a2" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch1Beta0</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch1Beta" />
+			<div class="right-lower-bottom-sec-label-value">Ch1Beta0</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch1Beta" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch1n</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch1n" />
+			<div class="right-lower-bottom-sec-label-value">Ch1n</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch1n" />
 			</div>
 		</div>
 
-		<div style="height: 5%; width: 100%; float: left;">
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				a3</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a3" />
+		<div class="right-lower-bottom-sec">
+			<div class="right-lower-bottom-sec-label-value">a3</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a3" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				a8</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a8" />
+			<div class="right-lower-bottom-sec-label-value">a8</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a8" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch2Alpha0</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch2Alpha" />
+			<div class="right-lower-bottom-sec-label-value">Ch2Alpha0</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch2Alpha" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				Ch2s</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch2s" />
+			<div class="right-lower-bottom-sec-label-value">Ch2s</div>
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch2s" />
 			</div>
 		</div>
 
-		<div style="height: 5%; width: 100%; float: left;">
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
+		<div class="right-lower-bottom-sec">
+			<div class="right-lower-bottom-sec-label-value">
 				a0</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a0" />
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a0" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
+			<div class="right-lower-bottom-sec-label-value">
 				a5</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a5" />
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a5" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
+			<div class="right-lower-bottom-sec-label-value">
 				Ch2Beta0</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch2Beta" />
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch2Beta" />
 			</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
+			<div class="right-lower-bottom-sec-label-value">
 				Ch2n</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_ch2n" />
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_ch2n" />
 			</div>
 		</div>
 
-		<div style="height: 5%; width: 100%; float: left;">
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
+		<div class="right-lower-bottom-sec">
+			<div class="right-lower-bottom-sec-label-value">
 				a6</div>
-			<div
-				style="width: 12%; height: 48%; float: left; text-align: center;">
-				<input type="text" style="width: 90%; text-align: center;"
-					value="0.0" id="rb_a6" />
+			<div class="right-lower-bottom-sec-label-value">
+				<input type="text" value="0.0" id="rb_a6" />
 			</div>
 		</div>
 
 
-		<div style="width: 50%; float: right;">
-			<div style="width: 100%; float: right; float: left;">
-				<input type="submit" onclick="uploadValues()" value="Upload"
-					style="margin: 5% 5% 0 0; float: right; border: 1px solid #cecece; background: #fff; border-radius: 5px;" />
+		<div class="upload-btn-sec">
+			<div class="upload-btn-sec-full">
+				<input type="submit" onclick="uploadValues()" value="Upload" />
 			</div>
 		</div>
 		<!-- ./Lower Bottom Section -->

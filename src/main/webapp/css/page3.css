@@ -145,3 +145,170 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 	appearance: none;
 	margin: 0;
 }
+
+.page3-main-div {
+	width: 78%;
+	margin: 0;
+	padding: 0;
+	float: left;
+	border: 1px solid #cecece;
+	border-radius: 5px;
+	height: 100%;
+}
+
+.page3-left-sec {
+	width: 38%;
+	height: 92%;
+	padding: 2%;
+	margin: 0;
+	float: left;
+}
+
+.page3-left-top-sec {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 10%;
+	float: left;
+}
+
+.page3-left-top-sec-1 {
+	width: 30%;
+	float: left;
+}
+
+.page3-left-top-sec-2 {
+	width: 60%;
+	height: 10%;
+	float: left;
+}
+
+.page3-left-top-sec-2>select {
+	width: 100%;
+	border-bottom: 1px solid #000;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+}
+
+.page3-left-mid-sec {
+	width: 100%;
+	margin: 0 0 2% 0;
+	padding: 0;
+	height: 45%;
+	float: left;
+	border: 1px solid #cecece;
+	border-radius: 5px;
+}
+
+.page3-bottom-sec {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 30%;
+	float: left;
+}
+
+.right-sec {
+	width: 58%;
+	padding: 2%;
+	margin: 0;
+	float: left;
+}
+
+.right-upper-right-sec {
+	width: 70%;
+	float: right;
+}
+
+.a0-a6-val-sec {
+	width: 58%;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.right-lower-upper-sec {
+	height: 12%;
+	width: 100%;
+	float: left;
+}
+
+.right-lower-upper-sec-1 {
+	width: 50%;
+	float: left;
+}
+
+.right-lower-upper-sec-val-1 {
+	width: 25%;
+	height: 48%;
+	float: left;
+	text-align: center;
+}
+
+.right-lower-upper-sec-val-2 {
+	width: 25%;
+	height: 48%;
+	float: left;
+	text-align: center;
+}
+
+.right-lower-upper-sec-val-2>input {
+	width: 30%
+}
+
+.right-lower-upper-sec-2 {
+	width: 50%;
+	float: left;
+}
+
+.auto-btn-div {
+	width: 100%;
+	float: right;
+	float: left;
+}
+
+.auto-btn-div>input {
+	margin: 5% 5% 0 0;
+	float: right;
+	border: 1px solid #cecece;
+	background: #fff;
+	border-radius: 5px;
+}
+
+.right-lower-bottom-sec {
+	height: 5%;
+	width: 100%;
+	float: left;
+}
+
+.right-lower-bottom-sec-label-value {
+	width: 12%;
+	height: 48%;
+	float: left;
+	text-align: center;
+}
+
+.right-lower-bottom-sec-label-value>input {
+	width: 90%;
+	text-align: center;
+}
+
+.upload-btn-sec {
+	width: 50%;
+	float: right;
+}
+
+.upload-btn-sec-full {
+	width: 100%;
+	float: right;
+	float: left;
+}
+
+.upload-btn-sec-full>input {
+	margin: 5% 5% 0 0;
+	float: right;
+	border: 1px solid #cecece;
+	background: #fff;
+	border-radius: 5px;
+}
