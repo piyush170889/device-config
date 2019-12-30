@@ -153,11 +153,7 @@ function addRow() {
 
 function createMarkUpToAppendToTable(idToAllocate, ac, dphic, y0, y1, y2, y3,
 		y4) {
-	var markup = "<tr id='"
-			+ idToAllocate
-			+ "'>"
-			+ getTableRowMarkUp(idToAllocate, 0.0, 0.0, 0.0, 0.0, ac, dphic,
-					y0, y1, y2, y3, y4) + "</tr>";
+	var markup = "<tr id='"	+ idToAllocate + "'>" + getTableRowMarkUp(idToAllocate, 0.0, 0.0, 0.0, 0.0, ac, dphic, y0, y1, y2, y3, y4) + "</tr>";
 
 	return markup;
 }
@@ -165,40 +161,40 @@ function createMarkUpToAppendToTable(idToAllocate, ac, dphic, y0, y1, y2, y3,
 function getTableRowMarkUp(idToAllocate, lm, a, dphi, temp, ac, dphic, y0, y1,
 		y2, y3, y4) {
 
-	return "<td><input type='checkbox' checked /></td><td><input type='number' name='lm[]' value='"
+	return "<td><input type='checkbox' checked name='selcheckbox' /></td><td><input type='number' name='lm' value='"
 			+ lm
-			+ "' class='lmcls' /></td><td><input type='number' name='a[]' class='acls' value='"
+			+ "' class='lmcls' /></td><td><input type='number' name='a' class='acls' value='"
 			+ a
 			+ "' onkeyup='updateRowValue("
 			+ idToAllocate
-			+ ")' /></td><td><input type='number' name='dphi[]' class='dphicls' value='"
+			+ ")' /></td><td><input type='number' name='dphi' class='dphicls' value='"
 			+ dphi
 			+ "' onkeyup='updateRowValue("
 			+ idToAllocate
-			+ ")' /></td><td><input type='number' name='temp[]' value='"
+			+ ")' /></td><td><input type='number' name='temp' value='"
 			+ temp
 			+ "' class='tempcls' /></td><td class='accls'>"
 			+ ac
 			+ "</td><td class='dphiccls'>"
 			+ dphic
 			+ "</td><td>"
-			+ "<input type='number' readonly name=y0[] value='"
+			+ "<input type='number' readonly name=y0 value='"
 			+ y0
 			+ "' class='y0cls' />"
 			+ "</td><td>"
-			+ "<input type='number' readonly name=y1[] value='"
+			+ "<input type='number' readonly name=y1 value='"
 			+ y1
 			+ "' class='y1cls' />"
 			+ "</td><td>"
-			+ "<input type='number' readonly name=y2[] value='"
+			+ "<input type='number' readonly name=y2 value='"
 			+ y2
 			+ "' class='y2cls' />"
 			+ "</td><td>"
-			+ "<input type='number' readonly name=y3[] value='"
+			+ "<input type='number' readonly name=y3 value='"
 			+ y3
 			+ "' class='y3cls' />"
 			+ "</td><td class='y4cls'>"
-			+ "<input type='number' readonly name=y4[] value='"
+			+ "<input type='number' readonly name=y4 value='"
 			+ y4
 			+ "' class='y4cls' />"
 			+ "</td><td class='no-border-right'><img src='img/garbage.png' onclick=\"deleteRow('"
@@ -449,88 +445,60 @@ function setUploadValuesRightBottom(a0, a1, a2, a3, a5, a6, a8, ch1Alpha,
 
 function autoCalculate() {
 
-	var lm = $("input[name='lm[]']").map(function() {
-		return $(this).val();
-	}).get();
+	var lm = new Array();
+	var y0 = new Array();
+	var y1 = new Array();
+	var y2 = new Array();
+	var y3 = new Array();
+	var y4 = new Array();
 
-	var y0 = $("input[name='y0[]']").map(function() {
-		return $(this).val();
-	}).get();
-	// var lry0 = linearRegression(y0, lm);
-	// console.log(y0);
-//	console.log('y0 = ' + y0 + ', lm = ' + lm + ', lry0 slope = ' + lry0.slope
-//			+ ', intercept = ' + lry0.intercept);
-	// $('#LMy0a0').val(lry0.slope);
-	// $('#LMy0a6').val(lry0.intercept);
+	$('#liset_tbl input[name=selcheckbox]:checked').each(function() {
+		row = $(this).closest("tr");
 
-	var y1 = $("input[name='y1[]']").map(function() {
-		return $(this).val();
-	}).get();
-	// var lry1 = linearRegression(y1, lm);
-	// console.log('lry1 slope = ' + lry1.slope + ', intercept = '
-	// + lry1.intercept);
-	// $('#LMy1a0').val(lry1.slope);
-	// $('#LMy1a6').val(lry1.intercept);
-
-	var y2 = $("input[name='y2[]']").map(function() {
-		return $(this).val();
-	}).get();
-	// var lry2 = linearRegression(y2, lm);
-	// console.log('lry2 slope = ' + lry2.slope + ', intercept = '
-	// + lry2.intercept);
-	// $('#LMy2a0').val(lry2.slope);
-	// $('#LMy2a6').val(lry2.intercept);
-
-	var y3 = $("input[name='y3[]']").map(function() {
-		return $(this).val();
-	}).get();
-	// var lry3 = linearRegression(y3, lm);
-	// console.log('lry3 slope = ' + lry3.slope + ', intercept = '
-	// + lry3.intercept);
-	// $('#LMy3a0').val(lry3.slope);
-	// $('#LMy3a6').val(lry3.intercept);
-
-	var y4 = $("input[name='y4[]']").map(function() {
-		return $(this).val();
-	}).get();
-	// var lry4 = linearRegression(y4, lm);
-	// console.log('lry4 slope = ' + lry4.slope + ', intercept = '
-	// + lry4.intercept);
-	// $('#LMy4a0').val(lry4.slope);
-	// $('#LMy4a6').val(lry4.intercept);
-
-	// var formData = $('#rt_mid_tbl_submit').serialize();
-	var formData = {
-		lm : lm,
-		y0 : y0,
-		y1 : y1,
-		y2 : y2,
-		y3 : y3,
-		y4 : y4
-	}
-	console.log('formData = ' + formData);
-
-	$.ajax({
-		type : 'POST',
-		url : "autocalculate",
-		data : formData,
-		traditional : true,
-		success : function(data) {
-
-			console.log(data);
-			$('#LMy0a0').val(data.y0a0);
-			$('#LMy1a0').val(data.y1a0);
-			$('#LMy2a0').val(data.y2a0);
-			$('#LMy3a0').val(data.y3a0);
-			$('#LMy4a0').val(data.y4a0);
-			$('#LMy0a6').val(data.y0a6);
-			$('#LMy1a6').val(data.y1a6);
-			$('#LMy2a6').val(data.y2a6);
-			$('#LMy3a6').val(data.y3a6);
-			$('#LMy4a6').val(data.y4a6);
-		}
+		lm.push($(row).find("input[name=lm]").val());
+		y0.push($(row).find("input[name=y0]").val());
+		y1.push($(row).find("input[name=y1]").val());
+		y2.push($(row).find("input[name=y2]").val());
+		y3.push($(row).find("input[name=y3]").val());
+		y4.push($(row).find("input[name=y4]").val());
 	});
 
+	console.log('lm = ' + lm + ', y0 = ' + y0 + ', y1 = ' + y1 + ', y2 = ' + y2
+			+ ', y3 = ' + y3 + ', y4 = ' + y4);
+
+	if (lm.length > 2) {
+		var formData = {
+			lm : lm,
+			y0 : y0,
+			y1 : y1,
+			y2 : y2,
+			y3 : y3,
+			y4 : y4
+		}
+
+		$.ajax({
+			type : 'POST',
+			url : "autocalculate",
+			data : formData,
+			traditional : true,
+			success : function(data) {
+
+				console.log(data);
+				$('#LMy0a0').val(data.y0a0);
+				$('#LMy1a0').val(data.y1a0);
+				$('#LMy2a0').val(data.y2a0);
+				$('#LMy3a0').val(data.y3a0);
+				$('#LMy4a0').val(data.y4a0);
+				$('#LMy0a6').val(data.y0a6);
+				$('#LMy1a6').val(data.y1a6);
+				$('#LMy2a6').val(data.y2a6);
+				$('#LMy3a6').val(data.y3a6);
+				$('#LMy4a6').val(data.y4a6);
+			}
+		});
+	} else {
+		alert('Please select atleast 3 entries to auto-calculate')
+	}
 }
 
 function linearRegression(y, x) {

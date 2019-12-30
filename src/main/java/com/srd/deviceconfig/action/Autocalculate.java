@@ -218,11 +218,12 @@ public class Autocalculate extends ActionSupport {
 		int lmSize = this.lm.size();
 		System.out.println("lm Size = " + lmSize);
 
-		for (int i = 0; i < lmSize; i++) {
-			simpleRegression.addData(lm.get(i), values.get(i));
-		}
-
-		simpleRegression.regress();
+		if (lmSize > 2) {
+			for (int i = 0; i < lmSize; i++) {
+				simpleRegression.addData(lm.get(i), values.get(i));
+			}
+			simpleRegression.regress();
+		} 
 
 		return simpleRegression;
 	}
